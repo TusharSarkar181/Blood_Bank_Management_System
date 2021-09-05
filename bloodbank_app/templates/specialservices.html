@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html lanh="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Special Services</title>
+
+      <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+         
+        <div class="image">
+            <p class="header">Welcome to bloodbank</p>
+        </div>
+    <style type="text/css">
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+    .image {
+      background-image: url(https://cdn.britannica.com/32/191732-050-5320356D/Human-red-blood-cells.jpg);
+      height: 250px;
+    }
+
+    .header {
+      padding-top: 50px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    </style>
+
+    <style type="text/css">
+         
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #1f72ee 20%, #fc08db 80%);
+      min-height: 90vh
+    }
+    .bg-primary {
+    background-color: #155724!important;
+    }
+    .bg-secondary {
+    background-color: #2c3e50!important;
+}
+
+    .container {
+      margin-top: 0;
+      position: relative;
+      z-index: 100
+    }
+
+    .container .row .card {
+      min-width: 250px;
+      max-width: 270px;
+      height: 320px;
+      margin: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+      cursor: pointer;
+      position: relative
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      width: 20px;
+      opacity: 0;
+      z-index: 200;
+      right: 10px;
+      top: 10px;
+      cursor: pointer
+    }
+
+    .fas.fa-heart {
+      position: absolute;
+      cursor: pointer;
+      right: 10px;
+      top: 10px;
+      font-size: 1.3rem;
+      color: #ffffff80
+    }
+
+    .container .row .card .card-body {
+      padding: 1rem 1.2rem;
+      color: #fff
+    }
+
+     @keyframes heart {
+        0% {
+          transform: scale(.50)
+        }
+
+        20% {
+         transform: scale(1)
+        }
+
+        100% {
+         transform: scale(1)
+        }
+      }
+
+    input[type="checkbox"]:checked+.fas.fa-heart {
+      will-change: font-size;
+      color: #e2264d;
+      animation: heart 1s cubic-bezier(.17, .89, .32, 1.49)
+    }
+
+    .container .row .card .card-body .card-img img {
+      width: 150px;
+      height: 100px;
+      object-fit: contain
+    }
+
+    .container .row .card .card-body .name.h5 {
+      margin: 0
+    }
+
+    .container .row .card .card-body .price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #6ef5bf
+    }
+
+    .container .row .card .card-body .btn.btn-primary {
+      background: linear-gradient(145deg, #0685ac, #36aa7c 50%, #0685ac);
+      border: none;
+      font-size: 600
+    }
+
+    .container .row .card .card-body .btn.btn-primary:hover {
+      background: linear-gradient(110deg, #0685ac, #05ff9b 50%, #0685ac)
+    }
+    </style>
+
+</head>
+<body>
+	<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+          <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index">Blood Bank</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="home.html">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="about.html">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="contact.html">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="specialservices.html">Special Services</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="search_result.html">Search</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="DonorDetails.html">DonorDetails</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="DonorRegistration.html">DonorRegistration</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  
+
+        <!-- Special Services Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+          <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-white">Special Services</h2>
+            <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+            <!-- Special Services Item 1-->
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <div class="card"> <input type="checkbox"> 
+                    <div class="card-body text-center">
+                      <div class="card-img py-2"> <img class="img-fluid" src="{% static 'assets/img/portfolio/pic-1.jpg' %}" alt="" /> </div>
+                      <div class="name h5">Hand Sanitizer</div>
+                      <div class="price">120.00 TK</div>
+                      <div class="description"> Instant Hand Sanitizer  <br /> 100 ml </div>
+                      <a href="{%url 'PaymentGateway'%}? price= 120"> 
+                        <div class="btn btn-primary my-2 mt-3">Pay</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            <!-- Special Services Item 2-->
+              <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card"> <input type="checkbox"> 
+                  <div class="card-body text-center">
+                    <div class="card-img py-2"> <img class="img-fluid" src="{% static 'assets/img/portfolio/pic-2.png' %}" alt="" /> </div>
+                    <div class="name h5">Surgical mask</div>
+                    <div class="price">70.00 TK</div>
+                    <div class="description"> Surgical Mask - Disposable Face Mask (50pcs Pack)</div>
+                    <a href="{%url 'PaymentGateway'%}? price= 70"> 
+                      <div class="btn btn-primary my-2 mt-3">Pay</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <!-- Special Services Item 3-->
+              <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card"> <input type="checkbox"> 
+                  <div class="card-body text-center">
+                    <div class="card-img py-2"> <img class="img-fluid" src="{% static 'assets/img/portfolio/pic-3.png' %}" alt="" /> </div>
+                    <div class="name h5">Oxygen mask</div>
+                    <div class="price">400.00 TK</div>
+                    <div class="description"> Oxygen mask <br />(Child & Adult ) - 10 pcs </div>
+                    <a href="{% url 'PaymentGateway' %}? price= 400"> 
+                      <div class="btn btn-primary my-2 mt-3">Pay</div>
+                    </a>
+                  </div>
+               </div>
+              </div>
+              </div>
+            <!-- Special Services Item 4-->
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <div class="card"> <input type="checkbox"> 
+                   <div class="card-body text-center">
+                     <div class="card-img py-2"> <img class="img-fluid" src="{% static 'assets/img/portfolio/pic-4.jpg' %}" alt="" /> </div>
+                     <div class="name h5">Oxygen Cylinder</div>
+                     <div class="price">26522.00 TK</div>
+                     <div class="description"> Linde Oxygen Cylinder (Approved by Government)</div>
+                     <a href="{%url 'PaymentGateway'%}? price= 26522"> 
+                      <div class="btn btn-primary my-2 mt-3">Pay</div>
+                     </a>
+                   </div>
+                  </div>
+                </div>
+            <!-- Special Services Item 5-->
+              <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card"> <input type="checkbox"> 
+                  <div class="card-body text-center">
+                    <div class="card-img py-2"> <img class="img-fluid" src="{% static 'assets/img/portfolio/pic-5.png' %}" alt="" /> </div>
+                    <div class="name h5">PPE Kit</div>
+                    <div class="price">480.00 TK</div>
+                    <div class="description">White PPE Set with Mask / Hand Gloves / Shoe Cover</div>
+                    <a href="{%url 'PaymentGateway'%}? price= 480"> 
+                      <div class="btn btn-primary my-2 mt-3">Pay</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <!-- Special Services Item 6-->
+              <div class="col-lg-4 d-flex justify-content-center">
+                <div class="card"> <input type="checkbox"> 
+                  <div class="card-body text-center">
+                    <div class="card-img py-2"> <img class="img-fluid" src="{% static 'assets/img/portfolio/pic-6.png' %}" alt="" /> </div>
+                    <div class="name h5">Hand Glove</div>
+                    <div class="price">600.00 TK</div>
+                    <div class="description">Examination Gloves  <br />(B-Safe)- 25 pair</div>
+                    <a href="{%url 'PaymentGateway'%}? price= 600"> 
+                     <div class="btn btn-primary my-2 mt-3">Pay</div>
+                    </a>                
+                  </div>
+                </div>
+             </div>
+             </div>
+        </div>
+</section>
+<!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Bashundhara R/A
+                            <br />
+                            Dhaka-1229, Bangladesh <br />
+                            +880-2-44668200
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class=""></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class=""></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class=""></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class=""></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Blood Bank</h4>
+                        <p class="lead mb-0">
+                            Blood banking is the process that takes place in the lab to make sure that donated blood, or blood products, are safe before they are used in blood transfusions and other medical procedures
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © Your Website 2021</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+</body>
+</html>

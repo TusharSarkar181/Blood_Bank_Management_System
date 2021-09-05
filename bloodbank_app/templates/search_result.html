@@ -1,0 +1,155 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blood Search</title>
+  <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+        
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style type="text/css">
+   @import url('https://fonts.googleapis.com/css?family=Numans');
+
+   
+   {
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+   }
+  body
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: lightgreen;
+    background-image: url("static/assets/img/portfolio/pay.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .box{
+   min-width: 600px ;
+  }
+
+  .box.h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .box input
+  {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+  }
+
+ .box input[type="text"]
+ {
+   background: #fff;
+   width: 340px;
+   height: 43px;
+   border: none;
+   outline: none;
+   padding: 0 25px;
+ }
+
+ .box select
+ {
+  position: relative;
+  left: -3px;
+  border: none;
+  outline: none;
+  font-size:18px;
+  padding: 11px 100px 10px;
+  margin:-2px ;
+  border-right: 15px solid #fff;
+ }
+.box input[type="submit"]
+{
+  position: relative;
+  width: 150px;
+  height: 43px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #ff4282;
+  color: #fff;
+}
+.box input[type="submit"]:hover
+{
+
+  background: #ef296e;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index">Blood Bank</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="home.html">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="about.html">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="contact.html">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="specialservices.html">Special Services</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="search_result.html">Search</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="DonorDetails.html">DonorDetails</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="DonorRegistration.html">DonorRegistration</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  <!--search section-->
+<div class="home-search">
+<form action="/search?" method="get">
+<div class="search-items">
+<input id="search-box" type="text" name="bloodgroup" placeholder="Search Blood Group Here... " required >
+<button id="search-submit" type="submit"><i class="material-icons">search</i></button>
+</div>
+</form>
+</div>
+<div>
+<div>
+<h1>Search Results for {{keyword}}</h1>
+
+{% if results %}
+
+{% for result in results %}
+<h3>Name: {{result.name}}</h3>
+<h3>Blood group: {{result.bloodgroup}}</h3>
+<h3>Age: {{result.age}}</h3>
+<br><br>
+{% endfor %}
+
+{% else %}
+
+<h4>No Results Found</h4>
+
+{% endif %}
+ </div> 
+ </div>
+</body>
+</html>
